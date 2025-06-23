@@ -1,0 +1,36 @@
+.puzzle-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.puzzle-area {
+  border: 2px dashed #ccc;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.puzzle-piece {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s;
+}
+
+.puzzle-piece:hover:not(.placed) {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.puzzle-piece.placed {
+  border-color: #4CAF50;
+}
+
+.completion-message {
+  text-align: center;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
