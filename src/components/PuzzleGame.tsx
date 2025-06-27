@@ -120,8 +120,8 @@ const PuzzleGame: React.FC<{ imageUrl: string, difficulty: string }> = ({ imageU
     const x = e.clientX - offsetX
     const y = e.clientY - offsetY
     // 检查是否放置在正确位置附近
-    const maxGapX = Math.max(puzzleAreaSize.width / puzzleSize.cols / 5, 10)
-    const maxGapY = Math.max(puzzleAreaSize.height / puzzleSize.rows / 5, 10)
+    const maxGapX = Math.max(puzzleAreaSize.width / puzzleSize.cols / 4, 50)
+    const maxGapY = Math.max(puzzleAreaSize.height / puzzleSize.rows / 4, 50)
     const isCorrectPosition = 
       Math.abs(x - piece.correctX) < maxGapX && 
       Math.abs(y - piece.correctY) < maxGapY
