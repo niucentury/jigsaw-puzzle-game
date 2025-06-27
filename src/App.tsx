@@ -8,14 +8,14 @@ const App: React.FC = () => {
   const [difficulty, setDifficulty] = useState<'easy'|'medium'|'hard'>('medium')
 
   const images = [
-    '/images/xiaoxin.jpg', // 蜡笔小新
-    '/images/kenan.jpeg', // 柯南
-    '/images/nezha.jpeg', // 哪吒
-    '/images/xiongchumo.jpeg', // 熊出没
-    '/images/pikaqiu.jpeg', // 皮卡丘
-    '/images/wangwangdui.jpeg', // 汪汪队
-    '/images/peiqi.jpeg', // 小猪佩奇
-    '/images/haxiaolang.jpeg', // 哈小浪
+    '/jigsaw-puzzle-game/images/xiaoxin.jpg', // 蜡笔小新
+    '/jigsaw-puzzle-game/images/kenan.jpeg', // 柯南
+    '/jigsaw-puzzle-game/images/nezha.jpeg', // 哪吒
+    '/jigsaw-puzzle-game/images/xiongchumo.jpeg', // 熊出没
+    '/jigsaw-puzzle-game/images/pikaqiu.jpeg', // 皮卡丘
+    '/jigsaw-puzzle-game/images/wangwangdui.jpeg', // 汪汪队
+    '/jigsaw-puzzle-game/images/peiqi.jpeg', // 小猪佩奇
+    '/jigsaw-puzzle-game/images/haxiaolang.jpeg', // 哈小浪
   ]
 
   const handleImageSelect = (imageUrl: string) => {
