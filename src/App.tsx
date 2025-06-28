@@ -16,6 +16,7 @@ const App: React.FC = () => {
     '/jigsaw-puzzle-game/images/wangwangdui.jpeg', // 汪汪队
     '/jigsaw-puzzle-game/images/peiqi.jpeg', // 小猪佩奇
     '/jigsaw-puzzle-game/images/haxiaolang.jpeg', // 哈小浪
+    '/jigsaw-puzzle-game/images/dongwuxiongdi.jpeg', // 哈小浪
   ]
 
   const handleImageSelect = (imageUrl: string) => {
@@ -71,13 +72,11 @@ const App: React.FC = () => {
         </div>
       ) : (
         <div className="game-container">
-          <PuzzleGame imageUrl={selectedImage} difficulty={difficulty} />
-          <button 
-            className="back-button"
-            onClick={() => setGameStarted(false)}
-          >
-            回到首页
-          </button>
+          <PuzzleGame 
+            imageUrl={selectedImage} 
+            difficulty={difficulty} 
+            onBackToHome={() => setGameStarted(false)} 
+          />
         </div>
       )}
     </div>

@@ -13,7 +13,7 @@ interface PuzzlePiece {
   isPlaced: boolean
 }
 
-const PuzzleGame: React.FC<{ imageUrl: string, difficulty: string }> = ({ imageUrl, difficulty }) => {
+const PuzzleGame: React.FC<{ imageUrl: string, difficulty: string, onBackToHome: () => void }> = ({ imageUrl, difficulty, onBackToHome }) => {
   const [pieces, setPieces] = useState<PuzzlePiece[]>([])
   const [gameCompleted, setGameCompleted] = useState(false)
   const [windowSize, setWindowSize] = useState({
@@ -205,6 +205,12 @@ const PuzzleGame: React.FC<{ imageUrl: string, difficulty: string }> = ({ imageU
           }}
         >
           <h2>恭喜通关！</h2>
+          <button 
+            className="back-button"
+            onClick={onBackToHome}
+          >
+            回到首页
+          </button>
         </div>
       )}
     </div>
